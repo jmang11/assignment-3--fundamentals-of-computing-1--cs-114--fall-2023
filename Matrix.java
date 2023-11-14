@@ -21,7 +21,7 @@ public class Matrix {
     for (row = 0; row < Length ; row++){
       for (column = 0; column < Length ; column++){
         if(row + column == Length-1){
-          System.out.print("\u001B[33m" + matrix[row][column] + "\u001B[0m" + "\t");
+          System.out.print("\033[31m" + matrix[row][column] + "\033[37m" + "\t");
         }else if ( row + column > Length-1){
           System.out.print(matrix[row][column] + "\t");
         }else if(row + column < Length-1){
@@ -78,7 +78,8 @@ public class Matrix {
       for(column = 0; column < Length; column++){
         if(row + column < Length - 1){
           swap(row, column, Length - 1 - row, Length - 1 - column);
-        }else if(row + column == Length){}
+        }else if(row + column == Length){
+        }
       }
     }
 }
